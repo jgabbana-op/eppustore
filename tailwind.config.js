@@ -15,6 +15,14 @@ module.exports = {
         sans: ['var(--font-inter)']
       },
       colors: {
+        //eppus
+        'eppus-yellow': '#FFCF3F',
+        'eppus-red': '#B03D25',
+        'eppus-brown': '#4a4234',
+        'eppus-yellow-font': '#fae7b0',
+        background: '#1D1A1A',
+        silver: '#f4f2f8',
+        //eppus end
         gray: colors.neutral,
         hotPink: '#FF1966',
         dark: '#111111',

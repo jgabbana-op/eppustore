@@ -22,7 +22,10 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.15",
+    "@mui/material": "^5.14.1",
     "clsx": "^1.2.1",
     "next": "13.4.9-canary.2",
     "react": "18.2.0",

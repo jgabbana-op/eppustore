@@ -1,13 +1,13 @@
 import Navbar from 'components/layout/navbar';
-import { Inter } from 'next/font/google';
-import { ReactNode, Suspense } from 'react';
+import localFont from 'next/font/local';
+import { ReactNode } from 'react';
 import './globals.css';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
 
 export const metadata = {
   title: {
-    default: SITE_NAME,
+    default: SITE_NAME || 'eppus',
     template: `%s | ${SITE_NAME}`
   },
   robots: {
@@ -24,20 +24,19 @@ export const metadata = {
     })
 };
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
+const myFont = localFont({
+  src: '../public/cooper.ttf',
+  display: 'swap'
 });
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-white text-black selection:bg-teal-300 dark:bg-black dark:text-white dark:selection:bg-fuchsia-600 dark:selection:text-white">
-        <Navbar />
-        <Suspense>
-          <main>{children}</main>
-        </Suspense>
+    <html lang="en" className={myFont.className}>
+      <body>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <div className="flex flex-1 flex-col">{children}</div>
+        </div>
       </body>
     </html>
   );

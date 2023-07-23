@@ -1,10 +1,20 @@
+'use client';
+
+import { Modal } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export default function Navbar() {
+export const Nav = () => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsOpen(!modalIsOpen);
+  };
+
   return (
-    <nav>
-      <div className="specialborder fixed z-20 h-20 w-full bg-background">
+    <div>
+      <nav className="specialborder fixed z-20 h-20 w-full bg-background">
         {/* Desktop */}
         <div className="m-auto hidden w-11/12 max-w-screen-xl text-eppus-yellow-font lg:block">
           <div className="relative flex w-full items-center justify-between">
@@ -50,11 +60,6 @@ export default function Navbar() {
               <Link href="/catalogue">The catalogue</Link>
               <Link href="/contact">Contact</Link>
             </div>
-            {/* <div className="flex w-1/3 justify-end">
-              <Suspense fallback={<CartIcon className="h-6" />}>
-                <Cart />
-              </Suspense>
-            </div> */}
           </div>
         </div>
         {/* Mobile */}
@@ -74,7 +79,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="absolute right-8 top-2/4 -translate-y-2/4">
-            {/* <button className="" onClick={toggleModal}>
+            <button className="" onClick={toggleModal}>
               <svg viewBox="0 0 10 8" width="30">
                 <path
                   d="M1 1h8M1 4h 8M1 7h8"
@@ -117,53 +122,10 @@ export default function Navbar() {
                 </div>
               </div>
             </Modal>
-          </div> */}
           </div>
         </div>
-      </div>
+      </nav>
       <div className="visible h-20"></div>
-    </nav>
+    </div>
   );
-}
-
-// export default async function Navbar() {
-//   const menu = await getMenu('next-js-frontend-header-menu');
-
-//   return (
-//     <nav className="relative flex items-center justify-between bg-white p-4 dark:bg-black lg:px-6">
-//       <div className="block w-1/3 md:hidden">
-//         <MobileMenu menu={menu} />
-//       </div>
-//       <div className="flex justify-self-center md:w-1/3 md:justify-self-start">
-//         <div className="md:mr-4">
-//           <Link href="/" aria-label="Go back home">
-//             <LogoIcon className="h-8 transition-transform hover:scale-110" />
-//           </Link>
-//         </div>
-//         {menu.length ? (
-//           <ul className="hidden md:flex md:items-center">
-//             {menu.map((item: Menu) => (
-//               <li key={item.title}>
-//                 <Link
-//                   href={item.path}
-//                   className="rounded-lg px-2 py-1 text-gray-800 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
-//                 >
-//                   {item.title}
-//                 </Link>
-//               </li>
-//             ))}
-//           </ul>
-//         ) : null}
-//       </div>
-//       {/* <div className="hidden w-1/3 md:block">
-//         <Search />
-//       </div> */}
-
-//       <div className="flex w-1/3 justify-end">
-//         <Suspense fallback={<CartIcon className="h-6" />}>
-//           <Cart />
-//         </Suspense>
-//       </div>
-//     </nav>
-//   );
-// }
+};
