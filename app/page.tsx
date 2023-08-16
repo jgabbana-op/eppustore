@@ -5,7 +5,7 @@ import Image from 'next/image';
 export const runtime = 'edge';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description: "Eppu's Cheesesteaks. Piping hot forever.",
   openGraph: {
     images: [
       {
