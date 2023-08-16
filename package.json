@@ -27,6 +27,7 @@
     "@headlessui/react": "^1.7.15",
     "@mui/material": "^5.14.1",
     "clsx": "^1.2.1",
+    "framer-motion": "^10.15.1",
     "next": "13.4.9-canary.2",
     "react": "18.2.0",
     "react-cookie": "^4.1.1",
