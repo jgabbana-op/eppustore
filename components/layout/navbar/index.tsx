@@ -1,5 +1,8 @@
+import Cart from 'components/cart';
+import CartIcon from 'components/icons/cart';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export default function Navbar() {
   return (
@@ -44,17 +47,17 @@ export default function Navbar() {
                 </div>
               </a>
             </div>
-            <div className="flex flex-row space-x-8 uppercase ">
+            <div className="flex flex-row items-center space-x-8 uppercase">
               <Link href="/menu">Menu</Link>
               <Link href="/hotspots">Piping hotspots</Link>
               <Link href="/catalogue">The catalogue</Link>
               <Link href="/contact">Contact</Link>
+              <div className="-translate-y-[1px]">
+                <Suspense fallback={<CartIcon className="h-6" />}>
+                  <Cart />
+                </Suspense>
+              </div>
             </div>
-            {/* <div className="flex w-1/3 justify-end">
-              <Suspense fallback={<CartIcon className="h-6" />}>
-                <Cart />
-              </Suspense>
-            </div> */}
           </div>
         </div>
         {/* Mobile */}

@@ -1,6 +1,6 @@
 const Price = ({
   amount,
-  currencyCode = 'USD',
+  currencyCode = 'EUR',
   ...props
 }: {
   amount: string;
