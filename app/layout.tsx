@@ -25,7 +25,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang="en" className={myFont.className}>
       <body>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col overflow-hidden">
           <Navbar />
           <div className="flex flex-1 flex-col">{children}</div>
         </div>

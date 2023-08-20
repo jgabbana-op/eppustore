@@ -1,8 +1,9 @@
+import { PageWrapper } from 'components/page-wrapper';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="m-auto w-11/12 max-w-screen-xl">
+    <PageWrapper className="m-auto w-11/12 max-w-screen-xl">
       <div className="m-auto mb-10 flex w-full flex-col space-y-8 uppercase lg:flex-row lg:justify-around lg:space-x-16 lg:space-y-0">
         <div className="relative mt-10 h-96 w-full rounded bg-eppus-yellow px-4 py-8 text-center lg:mt-0">
           <div className="absolute left-2/4 top-2/4 z-0 h-52 w-52 -translate-x-2/4 -translate-y-2/4">
@@ -68,6 +69,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   );
 }

@@ -2,7 +2,6 @@ import Cart from 'components/cart';
 import CartIcon from 'components/icons/cart';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 
 export default function Navbar() {
@@ -86,9 +85,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="absolute right-0 top-2/4 -translate-y-2/4">
-            <Suspense fallback={<CartIcon className="h-6" />}>
-              <Cart />
-            </Suspense>
+            <Cart />
           </div>
         </div>
       </div>

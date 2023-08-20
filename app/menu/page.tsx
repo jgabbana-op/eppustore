@@ -1,8 +1,9 @@
+import { PageWrapper } from 'components/page-wrapper';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col overflow-hidden">
+    <PageWrapper className="flex flex-1 flex-col overflow-hidden">
       <div className="m-auto my-16 hidden w-10/12 max-w-screen-xl text-center uppercase md:block">
         <h2 className="text-5xl">Juicy. Sensational. Piping hot.</h2>
       </div>
@@ -49,6 +50,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   );
 }
