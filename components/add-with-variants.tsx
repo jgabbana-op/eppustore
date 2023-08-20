@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { ProductVariant } from 'lib/shopify/types';
 import { useState } from 'react';
 import { AddToCart } from './cart/add-to-cart';
@@ -11,8 +12,16 @@ type Props = {
 export const AddWithVariants = ({ variants }: Props) => {
   const [selectedVariantId, setSelectedVariantId] = useState<string | undefined>();
 
+  console.log(variants);
+
   if (variants.length === 1)
-    return <AddToCart className="mt-4" availableForSale merchandiseId={variants[0]?.id || ''} />;
+    return (
+      <AddToCart
+        className="mt-4"
+        availableForSale={variants[0]?.availableForSale}
+        merchandiseId={variants[0]?.id || ''}
+      />
+    );
   else
     return (
       <>
@@ -20,10 +29,18 @@ export const AddWithVariants = ({ variants }: Props) => {
           {variants.map((variant) => (
             <button
               key={variant.id}
-              onClick={() => setSelectedVariantId(variant.id)}
-              className={`flex-1 rounded-md border-2 border-eppus-yellow-font p-2 ${
-                variant.id === selectedVariantId ? 'bg-eppus-yellow text-black' : ''
-              }`}
+              onClick={() => {
+                if (variant.availableForSale) {
+                  setSelectedVariantId(variant.id);
+                }
+              }}
+              className={clsx(
+                'flex-1 rounded-md border-2 border-eppus-yellow-font p-2 transition-all',
+                {
+                  'bg-eppus-yellow text-black': variant.id === selectedVariantId,
+                  'cursor-not-allowed bg-eppus-red': !variant.availableForSale
+                }
+              )}
             >
               {variant.title}
             </button>
