@@ -16,6 +16,7 @@ export default async function Catalogue() {
     <div className="flex w-full flex-col items-center justify-center py-20 text-center">
       {products.map((product) => (
         <div className="flex flex-col items-center justify-center p-4" key={product.id}>
+          <div>{JSON.stringify(product.variants)}</div>
           <Image
             src={product.featuredImage.url}
             width={500}
