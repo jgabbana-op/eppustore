@@ -3,9 +3,9 @@ import LoadingDots from 'components/loading-dots';
 import { useRouter } from 'next/navigation';
 
 import clsx from 'clsx';
+import { removeItem } from 'components/cart/actions';
 import type { CartItem } from 'lib/shopify/types';
 import { useTransition } from 'react';
-import { removeItem } from 'components/cart/actions';
 
 export default function DeleteItemButton({ item }: { item: CartItem }) {
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function DeleteItemButton({ item }: { item: CartItem }) {
       }}
       disabled={isPending}
       className={clsx(
-        'ease flex min-w-[36px] max-w-[36px] items-center justify-center border px-2 transition-all duration-200 hover:border-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:hover:border-gray-600 dark:hover:bg-gray-900',
+        'ease flex min-w-[36px] max-w-[36px] items-center justify-center rounded border border-eppus-yellow-font px-2 transition-all duration-200 hover:bg-eppus-yellow',
         {
           'cursor-not-allowed px-0': isPending
         }

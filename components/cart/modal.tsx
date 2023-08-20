@@ -2,7 +2,6 @@
 
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import CartIcon from 'components/icons/cart';
 import CloseIcon from 'components/icons/close';
@@ -10,7 +9,6 @@ import ShoppingBagIcon from 'components/icons/shopping-bag';
 import Price from 'components/price';
 import { DEFAULT_OPTION } from 'lib/constants';
 import type { Cart } from 'lib/shopify/types';
-import { createUrl } from 'lib/utils';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import DeleteItemButton from './delete-item-button';
@@ -80,11 +78,11 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
           >
             <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col bg-white p-6 text-black dark:bg-black dark:text-white md:w-3/5 lg:w-2/5">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-bold">My Cart</p>
+                <p className="text-lg font-bold text-eppus-yellow-font">My Cart</p>
                 <button
                   aria-label="Close cart"
                   onClick={closeCart}
-                  className="text-black transition-colors hover:text-gray-500 dark:text-gray-100"
+                  className="text-black text-eppus-yellow-font transition-colors hover:text-gray-500 dark:text-gray-100"
                   data-testid="close-cart"
                 >
                   <CloseIcon className="h-7" />
@@ -92,7 +90,7 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
               </div>
 
               {cart.lines.length === 0 ? (
-                <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
+                <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden text-eppus-yellow-font">
                   <ShoppingBagIcon className="h-16" />
                   <p className="mt-6 text-center text-2xl font-bold">Your cart is empty.</p>
                 </div>
@@ -108,19 +106,10 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                         }
                       });
 
-                      const merchandiseUrl = createUrl(
-                        `/product/${item.merchandise.product.handle}`,
-                        new URLSearchParams(merchandiseSearchParams)
-                      );
-
                       return (
                         <li key={i} data-testid="cart-item">
-                          <Link
-                            className="flex flex-row space-x-4 py-4"
-                            href={merchandiseUrl}
-                            onClick={closeCart}
-                          >
-                            <div className="relative h-16 w-16 cursor-pointer overflow-hidden bg-white">
+                          <div className="flex flex-row space-x-4 py-4">
+                            <div className="relative h-16 w-16 overflow-hidden bg-none">
                               <Image
                                 className="h-full w-full object-cover"
                                 width={64}
@@ -147,10 +136,10 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                               amount={item.cost.totalAmount.amount}
                               currencyCode={item.cost.totalAmount.currencyCode}
                             />
-                          </Link>
+                          </div>
                           <div className="flex h-9 flex-row">
                             <DeleteItemButton item={item} />
-                            <p className="ml-2 flex w-full items-center justify-center border dark:border-gray-700">
+                            <p className="ml-2 flex w-full items-center justify-center rounded-l border border-eppus-yellow-font">
                               <span className="w-full px-2">{item.quantity}</span>
                             </p>
                             <EditItemQuantityButton item={item} type="minus" />
@@ -160,7 +149,7 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                       );
                     })}
                   </ul>
-                  <div className="border-t border-gray-200 pt-2 text-sm text-black dark:text-white">
+                  <div className="border-t border-eppus-yellow pt-2 text-sm">
                     <div className="mb-2 flex items-center justify-between">
                       <p>Subtotal</p>
                       <Price
@@ -177,7 +166,7 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                         currencyCode={cart.cost.totalTaxAmount.currencyCode}
                       />
                     </div>
-                    <div className="mb-2 flex items-center justify-between border-b border-gray-200 pb-2">
+                    <div className="mb-2 flex items-center justify-between border-b border-eppus-yellow pb-2">
                       <p>Shipping</p>
                       <p className="text-right">Calculated at checkout</p>
                     </div>
@@ -192,7 +181,7 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                   </div>
                   <a
                     href={cart.checkoutUrl}
-                    className="flex w-full items-center justify-center bg-black p-3 text-sm font-medium uppercase text-white opacity-90 hover:opacity-100 dark:bg-white dark:text-black"
+                    className="flex w-full items-center justify-center rounded bg-eppus-yellow p-3 text-sm font-medium uppercase text-white opacity-90 hover:opacity-100"
                   >
                     <span>Proceed to Checkout</span>
                   </a>
