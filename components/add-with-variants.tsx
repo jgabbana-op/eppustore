@@ -18,7 +18,7 @@ export const AddWithVariants = ({ variants }: Props) => {
     return (
       <AddToCart
         className="mt-4"
-        availableForSale={variants[0]?.availableForSale}
+        availableForSale={variants[0]?.availableForSale || false}
         merchandiseId={variants[0]?.id || ''}
       />
     );
