@@ -1,25 +1,9 @@
-import { AddToCart } from 'components/cart/add-to-cart';
-import { createCart, getCart, getProducts } from 'lib/shopify';
-import { cookies } from 'next/headers';
+import { AddWithVariants } from 'components/add-with-variants';
+import { getProducts } from 'lib/shopify';
 import Image from 'next/image';
 
 export default async function Catalogue() {
   const products = await getProducts({});
-
-  //cart init logic
-  let cartId = cookies().get('cartId')?.value;
-  let cart;
-
-  if (cartId) {
-    cart = await getCart(cartId);
-  }
-
-  if (!cartId || !cart) {
-    cart = await createCart();
-    cartId = cart.id;
-    cookies().set('cartId', cartId);
-  }
-  //cart logic end
 
   if (products.length === 0)
     return (
@@ -40,12 +24,14 @@ export default async function Catalogue() {
             alt={product.title}
             className="bg-[#1d1a1a]"
           />
-          <h1 className="mt-6">{product.title}</h1>
-          <h3 className="mt-4">
-            <span>{product.priceRange.maxVariantPrice.amount}</span>{' '}
-            <span>{product.priceRange.maxVariantPrice.currencyCode}</span>
-          </h3>
-          <AddToCart availableForSale productId={product.id} />
+          <div className="mt-6 flex w-full flex-row items-end justify-between">
+            <h1 className="text-3xl text-eppus-yellow">{product.title}</h1>
+            <h3 className="">
+              <span>{product.priceRange.maxVariantPrice.amount}</span>{' '}
+              <span>{product.priceRange.maxVariantPrice.currencyCode}</span>
+            </h3>
+          </div>
+          <AddWithVariants variants={product.variants} />
         </div>
       ))}
     </div>
