@@ -63,9 +63,9 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
             leaveTo="translate-x-[-100%]"
           >
             <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 flex h-full w-full flex-col bg-eppus-brown pb-6">
-              <div className="p-4">
+              <div className="relative p-4">
                 <button
-                  className="mb-4"
+                  className="absolute right-4 top-4 text-eppus-yellow-font"
                   onClick={closeMobileMenu}
                   aria-label="Close mobile menu"
                   data-testid="close-mobile-menu"

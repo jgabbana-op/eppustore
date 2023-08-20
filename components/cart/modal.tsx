@@ -76,7 +76,7 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col bg-white p-6 text-black dark:bg-black dark:text-white md:w-3/5 lg:w-2/5">
+            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col bg-eppus-brown p-6 md:w-3/5 lg:w-2/5">
               <div className="flex items-center justify-between">
                 <p className="text-lg font-bold text-eppus-yellow-font">My Cart</p>
                 <button
