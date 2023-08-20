@@ -14,7 +14,7 @@ export default async function Catalogue() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center py-20 text-center">
-      {JSON.stringify(products[0])}
+      {JSON.stringify(products)}
       {products.map((product) => (
         <div className="flex flex-col items-center justify-center p-4" key={product.id}>
           <div>{JSON.stringify(product.variants)}</div>
