@@ -1,3 +1,4 @@
+import { EppusGradient } from 'components/eppus-gradient';
 import { Insta } from 'components/icons/insta';
 import { Tiktok } from 'components/icons/tiktok';
 import { PageWrapper } from 'components/page-wrapper';
@@ -46,34 +47,7 @@ export default function Home() {
               </div>
             </a>
           </div>
-          <div className="gradientBrown mt-4 flex h-60 w-full justify-between rounded-lg bg-eppus-brown text-eppus-yellow-font md:h-96 lg:mt-12">
-            <div className="relative h-full flex-1">
-              <h2 className="absolute left-6 top-8 text-2xl uppercase md:left-1/4 md:top-20 md:text-4xl">
-                Made with <br />
-                <span className="ml-8">diligence</span>
-              </h2>
-              <h2 className="absolute bottom-8 left-6 whitespace-nowrap text-2xl uppercase md:bottom-1/4 md:left-1/3 md:text-4xl lg:left-2/4">
-                Served <br />{' '}
-                <span className="ml-8">
-                  piping <span className="text-eppus-red">hot</span>
-                </span>
-              </h2>
-            </div>
-            <div className="relative h-full flex-1 xl:mr-20 xl:scale-125">
-              <Image
-                src="/cheesesteak.png"
-                alt="Picture of the author"
-                priority={true}
-                quality={100}
-                fill
-                sizes="100vw"
-                style={{
-                  maxWidth: '100%',
-                  objectFit: 'contain'
-                }}
-              />
-            </div>
-          </div>
+          <EppusGradient />
           <div className="m-auto mt-20 flex w-10/12 flex-col content-stretch space-y-16 lg:w-full lg:flex-row lg:justify-between lg:space-x-16 lg:space-y-0">
             <div className="relative grow rounded bg-eppus-yellow px-4 pb-20 pt-8 text-center">
               <div className="absolute -left-16 -top-4 h-32 w-32 lg:-left-20 lg:h-44 lg:w-44">
