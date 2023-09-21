@@ -1,5 +1,6 @@
 import Navbar from 'components/layout/navbar';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import { ReactNode } from 'react';
 import './globals.css';
 
@@ -24,6 +25,13 @@ const myFont = localFont({
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={myFont.className}>
+      <Head>
+        <link rel="preload" href="/eppuslogo.png" as="image" />
+        <link rel="preload" href="/steakhand.png" as="image" />
+        <link rel="preload" href="/foodtruck.png" as="image" />
+        <link rel="preload" href="/philpoint.png" as="image" />
+        <link rel="preload" href="/philhide.png" as="image" />
+      </Head>
       <body>
         <div className="flex min-h-screen flex-col overflow-hidden">
           <Navbar />
