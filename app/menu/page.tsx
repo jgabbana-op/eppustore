@@ -8,8 +8,9 @@ export default function Home() {
         <h2 className="text-5xl">Juicy. Sensational. Piping hot.</h2>
       </div>
       <div className="m-auto mb-14 mt-10 flex w-11/12 max-w-screen-xl flex-1 flex-col md:mt-0">
-        <div className="m-auto flex w-10/12 flex-1 flex-col space-y-8 lg:w-full lg:flex-row lg:space-x-16 lg:space-y-0">
-          <div className="relative flex max-h-[600px] flex-1 flex-col justify-center rounded bg-eppus-yellow px-4 py-8 text-center align-middle">
+        {/* Real content */}
+        <div className="m-10 mx-auto flex w-10/12 flex-1 flex-row justify-center">
+          <div className="relative flex max-w-[600px] flex-1 flex-col justify-center rounded bg-eppus-yellow px-4 py-8 text-center align-middle">
             <div className="absolute -left-16 -top-4 h-32 w-32 lg:-left-20 lg:h-44 lg:w-44">
               <Image
                 src="/philpoint.png"
@@ -28,7 +29,7 @@ export default function Home() {
             </p>
             <p className="mt-8">10€</p>
           </div>
-          <div className="relative flex max-h-[600px] flex-1 flex-col justify-center rounded bg-eppus-yellow px-4 py-8 text-center align-middle">
+          {/* <div className="relative flex max-h-[600px] flex-1 flex-col justify-center rounded bg-eppus-yellow px-4 py-8 text-center align-middle">
             <div className="absolute -bottom-8 -right-12 h-32 w-32 lg:-right-20 lg:h-44 lg:w-44">
               <Image
                 src="/philpoint.png"
@@ -47,7 +48,7 @@ export default function Home() {
               <br /> White cheddar
             </p>
             <p className="mt-8">8€</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </PageWrapper>
