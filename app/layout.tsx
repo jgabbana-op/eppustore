@@ -27,7 +27,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="en" className={myFont.className}>
       <Head>
         <link rel="preload" href="/eppuslogo.png" as="image" />
-        <link rel="preload" href="/steakhand.png" as="image" />
+        <link rel="preload" href="/handsteak2.png" as="image" />
         <link rel="preload" href="/foodtruck.png" as="image" />
         <link rel="preload" href="/philpoint.png" as="image" />
         <link rel="preload" href="/philhide.png" as="image" />
