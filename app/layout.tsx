@@ -31,6 +31,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="preload" href="/foodtruck.png" as="image" />
         <link rel="preload" href="/philpoint.png" as="image" />
         <link rel="preload" href="/philhide.png" as="image" />
+        <link rel="preload" href="/eppuskarry.png" as="image" />
+        <link rel="preload" href="/eppuskarrykiinni.png" as="image" />
       </Head>
       <body>
         <div className="flex min-h-screen flex-col overflow-hidden">
