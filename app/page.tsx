@@ -48,8 +48,8 @@ export default function Home() {
             </a>
           </div>
           <EppusGradient />
-          <div className="m-auto mt-20 flex w-10/12 flex-col content-stretch space-y-16 lg:w-full lg:flex-row lg:justify-between lg:space-x-16 lg:space-y-0">
-            <div className="relative grow rounded bg-eppus-yellow px-4 pb-20 pt-8 text-center">
+          <div className="m-auto mt-20 flex w-10/12 flex-col content-stretch justify-center space-y-16 lg:w-full lg:flex-row lg:space-x-16 lg:space-y-0">
+            <div className="relative rounded bg-eppus-yellow px-8 py-12 text-center lg:p-32">
               <div className="absolute -left-16 -top-4 h-32 w-32 lg:-left-20 lg:h-44 lg:w-44">
                 <Image
                   src="/philpoint.png"
@@ -69,7 +69,7 @@ export default function Home() {
               </p>
               <p className="mt-8">10€</p>
             </div>
-            <div className="relative grow">
+            {/* <div className="relative grow">
               <div className="absolute -top-9 left-2/4 h-32 w-32 -translate-x-2/4 lg:-top-12 lg:h-44 lg:w-44">
                 <Image
                   src="/philhide.png"
@@ -91,7 +91,7 @@ export default function Home() {
                 </p>
                 <p className="mt-8">8€</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="relative m-auto my-36 h-28 bg-background">
