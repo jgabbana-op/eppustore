@@ -24,8 +24,9 @@ export default function Home() {
             </div>
             <h3 className="fontborder text-2xl uppercase">Eppu&apos;s philly</h3>
             <p className="mt-8 uppercase">
-              Finnish beef chuck roll steak <br /> chopped onion <br /> aged cheddar sauce <br />{' '}
-              white cheddar
+              Chopped Chuckroll steak <br />
+              (Finnish beef)
+              <br /> fried onion <br /> aged cheddar sauce <br /> white chedder slices
             </p>
             <p className="mt-8">10€</p>
           </div>

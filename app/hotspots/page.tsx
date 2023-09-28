@@ -3,15 +3,16 @@ import { PageWrapper } from 'components/page-wrapper';
 export default function Home() {
   return (
     <PageWrapper className="m-auto w-11/12 max-w-screen-xl">
-      <div className="flex flex-col items-center justify-evenly gap-4 pt-10 lg:flex-row">
+      <div className="flex flex-col items-center justify-evenly gap-10 pb-10 pt-10 lg:flex-row">
         <div className="relative h-72 w-72 bg-[url('/eppustestitalo.png')] bg-contain bg-no-repeat lg:h-96 lg:w-96">
-          <p className="absolute bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-            Pursimiehenkatu 5
+          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap lg:bottom-8">
+            Pursimiehenkatu 5,
+            <br /> Helsinki Punavuori
           </p>
         </div>
         <div className="relative h-72 w-72 bg-[url('/eppuskarrykiinni.png')] bg-contain bg-no-repeat pb-10 lg:h-96 lg:w-96">
-          <p className="absolute bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap">
-            Temporarily out of order
+          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap lg:bottom-8">
+            Temporarily in the garage
           </p>
         </div>
       </div>
