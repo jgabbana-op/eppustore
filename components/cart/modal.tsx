@@ -158,14 +158,14 @@ export default function CartModal({ cart, cartIdUpdated }: { cart: Cart; cartIdU
                         currencyCode={cart.cost.subtotalAmount.currencyCode}
                       />
                     </div>
-                    <div className="mb-2 flex items-center justify-between">
+                    {/* <div className="mb-2 flex items-center justify-between">
                       <p>Taxes</p>
                       <Price
                         className="text-right"
                         amount={cart.cost.totalTaxAmount.amount}
                         currencyCode={cart.cost.totalTaxAmount.currencyCode}
                       />
-                    </div>
+                    </div> */}
                     <div className="mb-2 flex items-center justify-between border-b border-eppus-yellow pb-2">
                       <p>Shipping</p>
                       <p className="text-right">Calculated at checkout</p>
