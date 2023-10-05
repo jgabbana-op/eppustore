@@ -28,7 +28,7 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <a
-                  href="https://wolt.com/en/fin/helsinki/restaurant/eppus-cheesesteaks-kamppi"
+                  href="https://wolt.com/en/fin/helsinki/restaurant/eppus-cheesesteaks"
                   target="_blank"
                 >
                   <div className="flex flex-row uppercase">
