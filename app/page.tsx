@@ -27,7 +27,7 @@ export default function Home() {
         <div className="m-auto w-11/12 max-w-screen-xl bg-background">
           <div className="flex justify-center lg:hidden">
             <a
-              href="https://wolt.com/en/fin/helsinki/restaurant/eppus-cheesesteaks-kamppi"
+              href="https://wolt.com/en/fin/helsinki/restaurant/eppus-cheesesteaks"
               target="_blank"
             >
               <div className="flex flex-row justify-end align-bottom uppercase text-eppus-yellow-font">
