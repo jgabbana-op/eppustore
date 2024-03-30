@@ -9,6 +9,7 @@ export default function Home() {
             Pursimiehenkatu 5,
             <br /> Helsinki Punavuori
             <br /> <span className="text-eppus-yellow">Mon - Sun: 11:00 - 21:00</span>
+            <br /> <span className="text-eppus-yellow">Closed on easter Sunday and Monday!</span>
           </p>
         </div>
         <div className="relative h-72 w-72 bg-[url('/eppuskarrykiinni.png')] bg-contain bg-no-repeat pb-10 lg:h-96 lg:w-96">
