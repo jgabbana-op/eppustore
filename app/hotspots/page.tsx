@@ -5,12 +5,6 @@ export default function Home() {
     <PageWrapper className="m-auto w-11/12 max-w-screen-xl">
       <div className="flex flex-col items-center justify-evenly gap-10 pb-10 pt-10 lg:flex-row">
         <div className="relative h-72 w-72 bg-[url('/eppustestitalo.png')] bg-contain bg-no-repeat lg:h-96 lg:w-96">
-          <p className="absolute left-1/2 top-2 -translate-x-1/2 whitespace-nowrap text-center lg:bottom-6">
-            <br />{' '}
-            <span className="text-eppus-red">
-              Closed on easter <br /> Sunday and Monday!
-            </span>
-          </p>
           <p className="absolute bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-center lg:bottom-6">
             Pursimiehenkatu 5,
             <br /> Helsinki Punavuori

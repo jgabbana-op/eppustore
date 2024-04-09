@@ -68,7 +68,7 @@ export default function Home() {
                 (Finnish beef)
                 <br /> fried onion <br /> aged cheddar sauce <br /> white chedder slices
               </p>
-              <p className="mt-8">10€</p>
+              <p className="mt-8">12,90€</p>
             </div>
             {/* <div className="relative grow">
               <div className="absolute -top-9 left-2/4 h-32 w-32 -translate-x-2/4 lg:-top-12 lg:h-44 lg:w-44">
