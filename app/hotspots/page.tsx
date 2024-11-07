@@ -5,17 +5,28 @@ export default function Home() {
     <PageWrapper className="m-auto w-11/12 max-w-screen-xl">
       <div className="flex flex-col items-center justify-evenly gap-10 pb-10 pt-10 lg:flex-row">
         <div className="relative h-72 w-72 bg-[url('/eppustestitalo.png')] bg-contain bg-no-repeat lg:h-96 lg:w-96">
+          <p className="absolute left-1/2 top-8 -translate-x-1/2 whitespace-nowrap text-center lg:bottom-6">
+            Malagankatu 3
+            <br /> Helsinki Jätkäsaari
+          </p>
+          <p className="absolute bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-center lg:bottom-6">
+            <br /> <span className="text-eppus-yellow">Mon - Thu: 11:00 - 21:00</span>
+            <br /> <span className="text-eppus-yellow">Fri - Sat: 11:00 - 22:00</span>
+            <br /> <span className="text-eppus-yellow">Sun: Closed</span>
+          </p>
+        </div>
+        <div className="relative h-72 w-72 bg-[url('/eppustestitalo.png')] bg-contain bg-no-repeat lg:h-96 lg:w-96">
           <p className="absolute bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-center lg:bottom-6">
             Pursimiehenkatu 5,
             <br /> Helsinki Punavuori
-            <br /> <span className="text-eppus-yellow">Mon - Sun: 11:00 - 21:00</span>
+            <br /> <span className="text-eppus-yellow">CLOSED FOR RENOVATION!</span>
           </p>
         </div>
-        <div className="relative h-72 w-72 bg-[url('/eppuskarrykiinni.png')] bg-contain bg-no-repeat pb-10 lg:h-96 lg:w-96">
+        {/* <div className="relative h-72 w-72 bg-[url('/eppuskarrykiinni.png')] bg-contain bg-no-repeat pb-10 lg:h-96 lg:w-96">
           <p className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap lg:bottom-8">
             Temporarily in the garage
           </p>
-        </div>
+        </div> */}
       </div>
     </PageWrapper>
   );
